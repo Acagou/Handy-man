@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Ken's Fix-It List helps local homeowners with small repairs, punch lists, and simple handyman fixes around the house."
+    >
+    <title>Ken's Fix-It List | Local Handyman Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ken's Fix-It List home">
+        <span class="brand-mark">K</span>
+        <span>
+          <strong>Ken's Fix-It List</strong>
+          <small>Local handyman help</small>
+        </span>
+      </a>
+      <nav class="header-actions" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a class="header-cta" href="#lead-form">Request a Visit</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="trust-line">Veteran-owned &bull; Local &bull; Clear $99 visit</p>
+          <h1>Reliable Help for the Small Repairs You Keep Putting Off</h1>
+          <p class="hero-text">
+            Book a focused 90-minute handyman visit for small home repairs, punch lists, and simple fixes around the house.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lead-form">Request a Visit</a>
+            <a class="button button-secondary" href="#messenger">Text Ken</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Ken's Fix-It List service summary">
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder for Ken or a handyman at work">
+            <span>Add Ken's photo here</span>
+          </div>
+          <div class="price-card">
+            <p class="eyebrow">$99 Fix-It Visit</p>
+            <h2>Up to 90 minutes of labor</h2>
+            <p>Great for small repairs, punch lists, and jobs that do not need a full contractor.</p>
+            <span>Labor only. Materials not included.</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">What I Help With</p>
+          <h2>Small jobs handled clearly.</h2>
+          <p>
+            Best for practical fixes, short punch lists, and repair tasks that need a dependable local visit.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article>Door adjustments</article>
+          <article>Faucet leaks</article>
+          <article>Cabinet fixes</article>
+          <article>Drywall patches</article>
+          <article>Shelving</article>
+          <article>Light fixture swaps</article>
+          <article>Furniture assembly</article>
+          <article>Small punch lists</article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="section-heading">
+          <p class="eyebrow">Simple process</p>
+          <h2>How It Works</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>1</span>
+            <div>
+              <strong>Send your repair list</strong>
+              <p>Use the form to describe the small jobs and add photos if you have them.</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <strong>Ken confirms what can be handled</strong>
+              <p>You will know what fits the visit before anything is booked.</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <strong>Book a 90-minute visit</strong>
+              <p>Pick a preferred day and Ken will follow up with timing.</p>
+            </div>
+          </li>
+          <li>
+            <span>4</span>
+            <div>
+              <strong>Get the small jobs handled</strong>
+              <p>Clear work, honest scope, and no oversized contractor process.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section note-section">
+        <p>
+          Best for small repairs and punch-list jobs. Not intended for major electrical, plumbing, roofing, or large renovation work.
+        </p>
+      </section>
+
+      <section class="lead-section section" id="lead-form">
+        <div class="section-heading sticky-copy">
+          <p class="eyebrow">Request a Visit</p>
+          <h2>Tell Ken what needs fixing.</h2>
+          <p>
+            Share the basics and upload photos if you have them. Ken will follow up to confirm timing, scope, and whether the job fits the $99 visit.
+          </p>
+          <div class="mini-trust">
+            <span>Local</span>
+            <span>Veteran-owned</span>
+            <span>Clear pricing</span>
+          </div>
+        </div>
+
+        <form class="lead-form" name="fix-it-lead" method="post" data-netlify="true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="fix-it-lead">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" required>
+          </label>
+          <label class="full">
+            Address
+            <input type="text" name="address" autocomplete="street-address" required>
+          </label>
+          <label class="full">
+            Job description
+            <textarea name="job-description" rows="5" placeholder="List the repairs or small jobs you need help with." required></textarea>
+          </label>
+          <label>
+            Photos
+            <input type="file" name="photos" accept="image/*" multiple>
+          </label>
+          <label>
+            Preferred day
+            <select name="preferred-day" required>
+              <option value="">Choose a day</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+          </label>
+          <button class="button button-primary full" type="submit">Send Request</button>
+          <p class="form-note">Submitting this form does not confirm an appointment. Ken will contact you first.</p>
+        </form>
+      </section>
+
+      <section class="section faq">
+        <div class="section-heading">
+          <p class="eyebrow">Quick answers</p>
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What is included in the $99 visit?</summary>
+            <p>Up to 90 minutes of handyman labor for small repair tasks that can be handled safely with standard tools.</p>
+          </details>
+          <details>
+            <summary>Are materials included?</summary>
+            <p>No. The $99 visit is labor only. Parts, materials, and supplies are paid separately.</p>
+          </details>
+          <details>
+            <summary>What is not included?</summary>
+            <p>Major electrical, plumbing, roofing, structural work, permit work, hazardous repairs, and jobs requiring a licensed specialist are not included.</p>
+          </details>
+          <details>
+            <summary>What if the job takes longer than 90 minutes?</summary>
+            <p>Ken will explain the next step and quote additional time before continuing.</p>
+          </details>
+          <details>
+            <summary>Can I make a list of several small jobs?</summary>
+            <p>Yes. The visit works well for a short punch list. Ken will prioritize what can fit into the visit window.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta section">
+        <div>
+          <p class="eyebrow">Ready when your list is</p>
+          <h2>Have a list of small repairs?</h2>
+          <p>Send it over and Ken will tell you what can realistically be handled in one visit.</p>
+        </div>
+        <a class="button button-primary" href="#lead-form">Request a Visit</a>
+      </section>
+
+      <section class="messenger section" id="messenger">
+        <div>
+          <p class="eyebrow">Prefer to chat?</p>
+          <h2>Send a Facebook Messenger Note</h2>
+          <p>Have a quick question or want to send repair photos through Facebook?</p>
+        </div>
+        <a class="button button-secondary" href="https://m.me/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener">
+          Open Messenger
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Ken's Fix-It List</strong>
+      <span>Small home repairs, handled clearly.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
