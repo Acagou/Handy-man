@@ -506,6 +506,31 @@ details p {
   border-top: 1px solid rgba(31, 36, 32, 0.1);
 }
 
+.thank-you-page {
+  display: grid;
+  min-height: calc(100vh - 78px);
+  place-items: center;
+}
+
+.thank-you-card {
+  width: min(100%, 720px);
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 36, 32, 0.1);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.thank-you-card h1 {
+  font-size: clamp(2.2rem, 8vw, 4rem);
+}
+
+.thank-you-card p:not(.trust-line) {
+  max-width: 620px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
 @media (min-width: 560px) {
   .hero-actions {
     display: flex;
