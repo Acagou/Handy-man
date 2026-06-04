@@ -20,4 +20,4 @@ Import the folder as a static project. For form handling on Vercel, connect the 
 
 ## Before Launch
 
-Replace `https://m.me/YOUR_FACEBOOK_PAGE` in `index.html` with the real Facebook Messenger link.
+Confirm the Facebook Messenger link is still correct: `https://m.me/thefixitlist`.
