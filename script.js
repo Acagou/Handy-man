@@ -7,7 +7,7 @@ const workType = document.querySelector('select[name="work-type"]');
 const preferredDate = document.querySelector('input[name="preferred-date"]');
 const textarea = document.querySelector('textarea[name="job-description"]');
 const characterCount = document.querySelector(".character-count");
-const fileInput = document.querySelector('input[name="photos"]');
+const fileInput = document.querySelector('input[name="photo"]');
 const photoFeedback = document.querySelector(".photo-feedback");
 const nextButton = document.querySelector("[data-next-step]");
 const prevButton = document.querySelector("[data-prev-step]");
@@ -30,21 +30,24 @@ if (navToggle && siteHeader) {
     navToggle.setAttribute("aria-expanded", "false");
   }
 
+  function closeNavigationOnScrollIntent() {
+    if (siteHeader.classList.contains("nav-open")) {
+      closeNavigation();
+    }
+  }
+
   navToggle.addEventListener("click", () => {
     const isOpen = siteHeader.classList.toggle("nav-open");
     document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (siteHeader.classList.contains("nav-open")) {
-        closeNavigation();
-      }
-    },
-    { passive: true }
-  );
+  window.addEventListener("wheel", closeNavigationOnScrollIntent, { passive: true });
+  window.addEventListener("touchmove", closeNavigationOnScrollIntent, { passive: true });
+
+  siteHeader.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNavigation);
+  });
 }
 
 document.querySelectorAll("[data-scroll-target]").forEach((button) => {
@@ -105,14 +108,13 @@ function selectedPhotoText() {
     return "None selected";
   }
 
-  const count = Math.min(fileInput.files.length, 5);
-  return `${count} photo${count === 1 ? "" : "s"} selected`;
+  return `${fileInput.files[0].name} selected`;
 }
 
 if (fileInput && photoFeedback) {
   fileInput.addEventListener("change", () => {
-    if (fileInput.files.length > 5) {
-      photoFeedback.textContent = "Please upload 5 photos or fewer.";
+    if (fileInput.files[0]?.size > 10 * 1024 * 1024) {
+      photoFeedback.textContent = "Please upload a photo under 10MB.";
       fileInput.value = "";
     } else {
       photoFeedback.textContent = selectedPhotoText();
