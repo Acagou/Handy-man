@@ -924,8 +924,22 @@ select:focus {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.pricing-section {
+  padding-top: 34px;
+}
+
+.pricing-heading {
+  display: block;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.pricing-heading .eyebrow {
+  margin-bottom: 6px;
 }
 
 .pricing-card,
