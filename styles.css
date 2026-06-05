@@ -37,10 +37,6 @@ body {
   line-height: 1.45;
 }
 
-body.nav-open {
-  overflow: hidden;
-}
-
 a {
   color: inherit;
 }
@@ -845,6 +841,7 @@ select:focus {
   width: min(100%, 1180px);
   margin: 0 auto;
   padding: 54px 34px;
+  scroll-margin-top: 120px;
 }
 
 .section-heading {
@@ -1286,7 +1283,9 @@ details p {
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto;
+    max-height: 100vh;
     min-height: 72px;
+    overflow-y: auto;
     padding: 12px 18px;
   }
 
