@@ -190,7 +190,11 @@ if (leadForm) {
       return;
     }
 
-    if (window.location.protocol === "file:") {
+    const isLocalPreview = window.location.protocol === "file:" ||
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1";
+
+    if (isLocalPreview) {
       event.preventDefault();
       window.location.href = "thank-you.html";
       return;
