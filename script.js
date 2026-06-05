@@ -1,4 +1,9 @@
 const leadForm = document.querySelector(".lead-form");
+const preferredDate = document.querySelector('input[name="preferred-date"]');
+
+if (preferredDate) {
+  preferredDate.min = new Date().toISOString().split("T")[0];
+}
 
 if (leadForm) {
   leadForm.addEventListener("submit", (event) => {
