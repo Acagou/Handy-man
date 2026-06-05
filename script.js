@@ -24,11 +24,27 @@ if (preferredDate) {
 }
 
 if (navToggle && siteHeader) {
+  function closeNavigation() {
+    siteHeader.classList.remove("nav-open");
+    document.body.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
   navToggle.addEventListener("click", () => {
     const isOpen = siteHeader.classList.toggle("nav-open");
     document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (siteHeader.classList.contains("nav-open")) {
+        closeNavigation();
+      }
+    },
+    { passive: true }
+  );
 }
 
 document.querySelectorAll("[data-scroll-target]").forEach((button) => {
