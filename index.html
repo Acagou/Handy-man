@@ -5,222 +5,379 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Ken's Fix-It List helps local homeowners with small repairs, punch lists, and simple handyman fixes around the house."
+      content="Fix-It Home Services helps local homeowners request small repair visits, punch-list work, and simple handyman fixes."
     >
-    <title>Ken's Fix-It List | Local Handyman Help</title>
+    <title>Fix-It Home Services | Local Handyman Help</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Ken's Fix-It List home">
-        <span class="brand-mark">K</span>
-        <span>
-          <strong>Ken's Fix-It List</strong>
-          <small>Local handyman help</small>
+      <a class="brand" href="#top" aria-label="Fix-It Home Services home">
+        <span class="brand-shield" aria-hidden="true">
+          <i class="fa-solid fa-star"></i>
+        </span>
+        <span class="brand-copy">
+          <strong>Fix-It<br>Home Services</strong>
         </span>
       </a>
-      <nav class="header-actions" aria-label="Primary navigation">
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Open navigation</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a class="header-cta" href="#lead-form">Request a Visit</a>
+        <a href="#process">How It Works</a>
+        <a href="#faq">FAQ</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="messenger-link" href="https://m.me/thefixitlist" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <span>Message Us</span>
+        </a>
+        <a class="phone-link" href="tel:+15043515887">
+          <i class="fa-solid fa-phone"></i>
+          <span>5043515887</span>
+        </a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-copy">
-          <p class="trust-line">Veteran-owned &bull; Local &bull; Clear $99 visit</p>
-          <h1>Reliable Help for the Small Repairs You Keep Putting Off</h1>
-          <p class="hero-text">
-            Book a focused 90-minute handyman visit for small home repairs, punch lists, and simple fixes around the house.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#lead-form">Request a Visit</a>
-            <a class="button button-secondary" href="#messenger">Text Ken</a>
+        <div class="hero-main">
+          <div class="hero-copy">
+            <p class="kicker">Local handyman help. Done right.</p>
+            <h1>Local handyman help for your to-do list.</h1>
+
+            <div class="price-lockup" aria-label="$99 visit price">
+              <strong>$99</strong>
+              <span>A visit</span>
+              <p>Up to 90 minutes of labor</p>
+            </div>
+
+            <p class="hero-note">One low price. Real help. Check more off your list.</p>
+
+            <div class="trust-grid" aria-label="Service promises">
+              <article>
+                <i class="fa-solid fa-shield-halved"></i>
+                <strong>Veteran-owned</strong>
+                <span>Discipline. Integrity. Pride in the work.</span>
+              </article>
+              <article>
+                <i class="fa-regular fa-clock"></i>
+                <strong>On time</strong>
+                <span>We respect your time and home.</span>
+              </article>
+              <article>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <strong>Satisfaction minded</strong>
+                <span>If it is not right, we will make it right.</span>
+              </article>
+            </div>
           </div>
+
+          <figure class="hero-photo" id="about">
+            <img src="assets/ken-photo.jpg" alt="Ken from Fix-It Home Services at a completed work site">
+            <figcaption>
+              <strong>Fix-It Home Services</strong>
+              <span>Small repairs, clear scope, local service.</span>
+            </figcaption>
+          </figure>
+
+          <section class="services-panel" id="services" aria-labelledby="services-title">
+            <div class="panel-heading">
+              <h2 id="services-title">Common small home repairs we handle</h2>
+              <button class="text-button" type="button" data-scroll-target="lead-form">
+                Start request
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="service-grid" role="list" aria-label="Common services">
+              <button class="service-card is-selected" type="button" data-service="Punch lists">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Punch Lists</span>
+              </button>
+              <button class="service-card" type="button" data-service="Door adjustments">
+                <i class="fa-solid fa-door-open"></i>
+                <span>Door Adjustments</span>
+              </button>
+              <button class="service-card" type="button" data-service="Faucet leaks and drips">
+                <i class="fa-solid fa-faucet-drip"></i>
+                <span>Faucet Leaks &amp; Drips</span>
+              </button>
+              <button class="service-card" type="button" data-service="Cabinet fixes">
+                <i class="fa-regular fa-square"></i>
+                <span>Cabinet Fixes</span>
+              </button>
+              <button class="service-card" type="button" data-service="Drywall patches">
+                <i class="fa-solid fa-hammer"></i>
+                <span>Drywall Patches</span>
+              </button>
+              <button class="service-card" type="button" data-service="Shelving and storage">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Shelving &amp; Storage</span>
+              </button>
+              <button class="service-card" type="button" data-service="Light fixture swaps">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>Light Fixture Swaps</span>
+              </button>
+              <button class="service-card" type="button" data-service="Furniture assembly">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Furniture Assembly</span>
+              </button>
+              <button class="service-card" type="button" data-service="Other small repair">
+                <i class="fa-solid fa-ellipsis"></i>
+                <span>...and more</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="proof-row" id="reviews" aria-label="Service proof">
+            <article>
+              <div class="stars" aria-label="5 star rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>5.0 (120+)</span>
+              </div>
+              <p>"Ken is reliable, skilled, and gets the job done right."</p>
+              <span>Local homeowner</span>
+            </article>
+            <article id="service-area">
+              <i class="fa-solid fa-location-dot"></i>
+              <strong>Proudly serving your local community</strong>
+              <span>New Orleans area and nearby communities</span>
+            </article>
+            <article>
+              <i class="fa-regular fa-circle-check"></i>
+              <strong>Clear expectations</strong>
+              <span>One visit. Up to 90 minutes. Materials not included.</span>
+            </article>
+          </section>
         </div>
 
-        <aside class="hero-card" aria-label="Ken's Fix-It List service summary">
-          <div class="photo-frame">
-            <img src="assets/ken-photo.jpg" alt="Ken from Ken's Fix-It List at a completed work site">
-            <span>Ken's Fix-It List</span>
+        <aside class="request-card" id="lead-form" aria-labelledby="request-title">
+          <div class="request-head">
+            <p>Request a Visit</p>
+            <h2 id="request-title">$99 visit &bull; Up to 90 minutes of labor</h2>
           </div>
-          <div class="price-card">
-            <p class="eyebrow">$99 Fix-It Visit</p>
-            <h2>Up to 90 minutes of labor</h2>
-            <p>Great for small repairs, punch lists, and jobs that do not need a full contractor.</p>
-            <span>Labor only. Materials not included.</span>
-          </div>
+
+          <ol class="step-tabs" aria-label="Request steps">
+            <li class="is-active" data-step-indicator="1"><span>1</span> Details</li>
+            <li data-step-indicator="2"><span>2</span> Photos</li>
+            <li data-step-indicator="3"><span>3</span> Review</li>
+          </ol>
+
+          <form class="lead-form" name="fix-it-lead" method="post" action="/thank-you.html" data-netlify="true" enctype="multipart/form-data">
+            <input type="hidden" name="form-name" value="fix-it-lead">
+            <input type="hidden" name="selected-service" id="selected-service" value="Punch lists">
+
+            <div class="form-step is-active" data-step="1">
+              <label>
+                What can we help you with?
+                <select name="work-type" required>
+                  <option value="">Select the main type of work</option>
+                  <option selected>Punch lists</option>
+                  <option>Door adjustments</option>
+                  <option>Faucet leaks and drips</option>
+                  <option>Cabinet fixes</option>
+                  <option>Drywall patches</option>
+                  <option>Shelving and storage</option>
+                  <option>Light fixture swaps</option>
+                  <option>Furniture assembly</option>
+                  <option>Other small repair</option>
+                </select>
+              </label>
+
+              <label>
+                Tell us more <span>(optional)</span>
+                <textarea name="job-description" rows="5" maxlength="300" placeholder="Describe the project or list the items you need help with."></textarea>
+                <small class="character-count">0 / 300</small>
+              </label>
+
+              <div class="field-row">
+                <label>
+                  Preferred date
+                  <input type="date" name="preferred-date" required>
+                </label>
+                <label>
+                  Time window
+                  <select name="time-window" required>
+                    <option>Anytime</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Early evening</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Your address
+                <input type="text" name="address" autocomplete="street-address" placeholder="Street address, city, and ZIP code" required>
+              </label>
+
+              <div class="field-row">
+                <label>
+                  Your name
+                  <input type="text" name="name" autocomplete="name" placeholder="Full name" required>
+                </label>
+                <label>
+                  Phone
+                  <input type="tel" name="phone" autocomplete="tel" placeholder="(555) 123-4567" required>
+                </label>
+              </div>
+
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+              </label>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <label class="upload-zone">
+                <input type="file" name="photos" accept="image/*" multiple>
+                <i class="fa-regular fa-image"></i>
+                <strong>Upload photos</strong>
+                <span>or drag and drop up to 5 files</span>
+                <small>JPG, PNG up to 10MB each</small>
+              </label>
+
+              <div class="photo-feedback" aria-live="polite">No photos selected yet.</div>
+
+              <div class="tips-box">
+                <strong>Tips for helpful photos</strong>
+                <ul>
+                  <li><i class="fa-solid fa-check"></i> Take photos in good light</li>
+                  <li><i class="fa-solid fa-check"></i> Show the whole area</li>
+                  <li><i class="fa-solid fa-check"></i> Zoom in on the issue</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <div class="review-box">
+                <h3>Review your request</h3>
+                <dl>
+                  <div>
+                    <dt>Work type</dt>
+                    <dd data-review="work-type">Punch lists</dd>
+                  </div>
+                  <div>
+                    <dt>Date</dt>
+                    <dd data-review="preferred-date">Not selected</dd>
+                  </div>
+                  <div>
+                    <dt>Time</dt>
+                    <dd data-review="time-window">Anytime</dd>
+                  </div>
+                  <div>
+                    <dt>Photos</dt>
+                    <dd data-review="photos">None selected</dd>
+                  </div>
+                </dl>
+                <p>Submitting this form does not confirm an appointment. Ken will contact you first.</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button-secondary" type="button" data-prev-step hidden>
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+              </button>
+              <button class="button button-primary" type="button" data-next-step>
+                Continue
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="button button-primary" type="submit" hidden>
+                Send Request
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="divider"><span>or</span></div>
+
+            <a class="messenger-cta" href="https://m.me/thefixitlist" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook-messenger"></i>
+              <span>
+                <strong>Message Us on Messenger</strong>
+                Chat with Ken and get help fast
+              </span>
+            </a>
+
+            <p class="privacy-note">
+              <i class="fa-solid fa-lock"></i>
+              We respect your privacy. Your information is never shared.
+            </p>
+          </form>
         </aside>
       </section>
 
-      <section class="section" id="services">
+      <section class="process-section section" id="process">
         <div class="section-heading">
-          <p class="eyebrow">What I Help With</p>
-          <h2>Small jobs handled clearly.</h2>
-          <p>
-            Best for practical fixes, short punch lists, and repair tasks that need a dependable local visit.
-          </p>
+          <p class="eyebrow">How it works</p>
+          <h2>Simple intake. Clear next step.</h2>
         </div>
-        <div class="service-grid">
-          <article>Door adjustments</article>
-          <article>Faucet leaks</article>
-          <article>Cabinet fixes</article>
-          <article>Drywall patches</article>
-          <article>Shelving</article>
-          <article>Light fixture swaps</article>
-          <article>Furniture assembly</article>
-          <article>Small punch lists</article>
-        </div>
-      </section>
-
-      <section class="section split-section">
-        <div class="section-heading">
-          <p class="eyebrow">Simple process</p>
-          <h2>How It Works</h2>
-        </div>
-        <ol class="steps">
+        <ol class="process-list">
           <li>
             <span>1</span>
-            <div>
-              <strong>Send your repair list</strong>
-              <p>Use the form to describe the small jobs and add photos if you have them.</p>
-            </div>
+            <strong>Send the job ticket</strong>
+            <p>Pick the work type, share the address, and add photos if you have them.</p>
           </li>
           <li>
             <span>2</span>
-            <div>
-              <strong>Ken confirms what can be handled</strong>
-              <p>You will know what fits the visit before anything is booked.</p>
-            </div>
+            <strong>Ken confirms the scope</strong>
+            <p>You will know what fits the $99 visit before anything is booked.</p>
           </li>
           <li>
             <span>3</span>
-            <div>
-              <strong>Book a 90-minute visit</strong>
-              <p>Pick a preferred day and Ken will follow up with timing.</p>
-            </div>
-          </li>
-          <li>
-            <span>4</span>
-            <div>
-              <strong>Get the small jobs handled</strong>
-              <p>Clear work, honest scope, and no oversized contractor process.</p>
-            </div>
+            <strong>Book the visit</strong>
+            <p>Ken follows up with timing, materials, and any clear limits.</p>
           </li>
         </ol>
       </section>
 
-      <section class="section note-section">
-        <p>
-          Best for small repairs and punch-list jobs. Not intended for major electrical, plumbing, roofing, or large renovation work.
-        </p>
-      </section>
-
-      <section class="lead-section section" id="lead-form">
-        <div class="section-heading sticky-copy">
-          <p class="eyebrow">Request a Visit</p>
-          <h2>Tell Ken what needs fixing.</h2>
-          <p>
-            Share the basics and upload photos if you have them. Ken will follow up to confirm timing, scope, and whether the job fits the $99 visit.
-          </p>
-          <div class="mini-trust">
-            <span>Local</span>
-            <span>Veteran-owned</span>
-            <span>Clear pricing</span>
-          </div>
-        </div>
-
-        <form class="lead-form" name="fix-it-lead" method="post" action="/thank-you.html" data-netlify="true" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="fix-it-lead">
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label>
-            Phone
-            <input type="tel" name="phone" autocomplete="tel" required>
-          </label>
-          <label class="full">
-            Address
-            <input type="text" name="address" autocomplete="street-address" required>
-          </label>
-          <label class="full">
-            Job description
-            <textarea name="job-description" rows="5" placeholder="List the repairs or small jobs you need help with." required></textarea>
-          </label>
-          <label>
-            Photos
-            <input type="file" name="photos" accept="image/*" multiple>
-          </label>
-          <label>
-            Preferred date
-            <input type="date" name="preferred-date" required>
-          </label>
-          <button class="button button-primary full" type="submit">Send Request</button>
-          <p class="form-note">Submitting this form does not confirm an appointment. Ken will contact you first.</p>
-        </form>
-      </section>
-
-      <section class="section faq">
+      <section class="faq-section section" id="faq">
         <div class="section-heading">
-          <p class="eyebrow">Quick answers</p>
-          <h2>FAQ</h2>
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2>Quick answers before you book.</h2>
         </div>
         <div class="faq-list">
           <details>
-            <summary>What is included in the $99 visit?</summary>
-            <p>Up to 90 minutes of handyman labor for small repair tasks that can be handled safely with standard tools.</p>
+            <summary>What's included in the $99 visit?</summary>
+            <p>Up to 90 minutes of handyman labor for small repair tasks.</p>
           </details>
           <details>
-            <summary>Are materials included?</summary>
-            <p>No. The $99 visit is labor only. Parts, materials, and supplies are paid separately.</p>
-          </details>
-          <details>
-            <summary>What is not included?</summary>
-            <p>Major electrical, plumbing, roofing, structural work, permit work, hazardous repairs, and jobs requiring a licensed specialist are not included.</p>
-          </details>
-          <details>
-            <summary>What if the job takes longer than 90 minutes?</summary>
+            <summary>What if the job takes more than 90 minutes?</summary>
             <p>Ken will explain the next step and quote additional time before continuing.</p>
           </details>
           <details>
-            <summary>Can I make a list of several small jobs?</summary>
-            <p>Yes. The visit works well for a short punch list. Ken will prioritize what can fit into the visit window.</p>
+            <summary>Do you provide the materials?</summary>
+            <p>The visit price is labor only. Materials and supplies are paid separately.</p>
+          </details>
+          <details>
+            <summary>What areas do you serve?</summary>
+            <p>Fix-It Home Services serves local homeowners in the New Orleans area and nearby communities.</p>
           </details>
         </div>
       </section>
-
-      <section class="final-cta section">
-        <div>
-          <p class="eyebrow">Ready when your list is</p>
-          <h2>Have a list of small repairs?</h2>
-          <p>Send it over and Ken will tell you what can realistically be handled in one visit.</p>
-        </div>
-        <a class="button button-primary" href="#lead-form">Request a Visit</a>
-      </section>
-
-      <section class="messenger section" id="messenger">
-        <div>
-          <p class="eyebrow">Prefer to chat?</p>
-          <h2>Send a Facebook Messenger Note</h2>
-          <p>Have a quick question or want to send repair photos through Facebook?</p>
-        </div>
-        <a class="button button-secondary" href="https://m.me/thefixitlist" target="_blank" rel="noopener">
-          Open Messenger
-        </a>
-      </section>
     </main>
-
-    <footer class="site-footer">
-      <strong>Ken's Fix-It List</strong>
-      <span>Small home repairs, handled clearly.</span>
-    </footer>
 
     <script src="script.js"></script>
   </body>

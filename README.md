@@ -1,4 +1,4 @@
-# Ken's Fix-It List Landing Page
+# Fix-It Home Services Landing Page
 
 Simple static landing page for a local handyman lead campaign.
 
