@@ -174,7 +174,7 @@ function setReviewValue(name, value) {
 }
 
 function updateReview() {
-  setReviewValue("work-type", workType?.value || selectedService?.value || "Punch lists");
+  setReviewValue("work-type", workType?.value || selectedService?.value || "$99 Home Fix-It Visit");
   setReviewValue("preferred-date", preferredDate?.value || "Not selected");
   setReviewValue("time-window", document.querySelector('select[name="time-window"]')?.value || "Anytime");
   setReviewValue("photos", selectedPhotoText());

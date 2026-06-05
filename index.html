@@ -40,6 +40,7 @@
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">How It Works</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -61,15 +62,26 @@
         <div class="hero-main">
           <div class="hero-copy">
             <p class="kicker">Local handyman help. Done right.</p>
-            <h1>Local handyman help for your to-do list.</h1>
+            <h1>Reliable handyman help for small home repairs, installations, and maintenance.</h1>
 
             <div class="price-lockup" aria-label="$99 visit price">
               <strong>$99</strong>
-              <span>A visit</span>
-              <p>Up to 90 minutes of labor</p>
+              <span>Home Fix-It Visit</span>
+              <p>Up to 90 minutes for small repairs and assessment</p>
             </div>
 
-            <p class="hero-note">One low price. Real help. Check more off your list.</p>
+            <p class="hero-note">Book a $99 Home Fix-It Visit for small household repairs, or request a flat-rate quote for larger jobs like ceiling fans, TV mounting, faucets, light fixtures, and drywall.</p>
+
+            <div class="hero-actions">
+              <button class="button button-primary" type="button" data-scroll-target="lead-form">
+                Book a $99 Visit
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="button button-secondary" type="button" data-scroll-target="pricing">
+                Get a Repair Quote
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
 
             <div class="trust-grid" aria-label="Service promises">
               <article>
@@ -91,16 +103,16 @@
           </div>
 
           <figure class="hero-photo" id="about">
-            <img src="assets/ken-photo.jpg" alt="Ken from Fix-It Home Services at a completed work site">
+            <img src="assets/service-photo.jpg" alt="Fix-It Home Services at a completed work site">
             <figcaption>
               <strong>Fix-It Home Services</strong>
-              <span>Small repairs, clear scope, local service.</span>
+              <span>Small repairs, flat-rate jobs, and custom quotes.</span>
             </figcaption>
           </figure>
 
           <section class="services-panel" id="services" aria-labelledby="services-title">
             <div class="panel-heading">
-              <h2 id="services-title">Common small home repairs we handle</h2>
+              <h2 id="services-title">Good fits for the $99 Home Fix-It Visit</h2>
               <button class="text-button" type="button" data-scroll-target="lead-form">
                 Start request
                 <i class="fa-solid fa-arrow-right"></i>
@@ -108,41 +120,45 @@
             </div>
 
             <div class="service-grid" role="list" aria-label="Common services">
-              <button class="service-card is-selected" type="button" data-service="Punch lists">
+              <button class="service-card is-selected" type="button" data-service="$99 Home Fix-It Visit">
                 <i class="fa-regular fa-clipboard"></i>
-                <span>Punch Lists</span>
+                <span>Home Repair Walkthrough</span>
               </button>
-              <button class="service-card" type="button" data-service="Door adjustments">
+              <button class="service-card" type="button" data-service="Loose handles">
+                <i class="fa-solid fa-screwdriver"></i>
+                <span>Loose Handles</span>
+              </button>
+              <button class="service-card" type="button" data-service="Cabinet hardware">
+                <i class="fa-solid fa-toolbox"></i>
+                <span>Cabinet Hardware</span>
+              </button>
+              <button class="service-card" type="button" data-service="Hinges">
+                <i class="fa-solid fa-grip-lines-vertical"></i>
+                <span>Hinges</span>
+              </button>
+              <button class="service-card" type="button" data-service="Door knobs">
                 <i class="fa-solid fa-door-open"></i>
-                <span>Door Adjustments</span>
+                <span>Door Knobs</span>
               </button>
-              <button class="service-card" type="button" data-service="Faucet leaks and drips">
-                <i class="fa-solid fa-faucet-drip"></i>
-                <span>Faucet Leaks &amp; Drips</span>
+              <button class="service-card" type="button" data-service="Curtain rods">
+                <i class="fa-solid fa-ruler-horizontal"></i>
+                <span>Curtain Rods</span>
               </button>
-              <button class="service-card" type="button" data-service="Cabinet fixes">
-                <i class="fa-regular fa-square"></i>
-                <span>Cabinet Fixes</span>
-              </button>
-              <button class="service-card" type="button" data-service="Drywall patches">
-                <i class="fa-solid fa-hammer"></i>
-                <span>Drywall Patches</span>
-              </button>
-              <button class="service-card" type="button" data-service="Shelving and storage">
+              <button class="service-card" type="button" data-service="Small shelves">
                 <i class="fa-solid fa-boxes-stacked"></i>
-                <span>Shelving &amp; Storage</span>
+                <span>Small Shelves</span>
               </button>
-              <button class="service-card" type="button" data-service="Light fixture swaps">
-                <i class="fa-regular fa-lightbulb"></i>
-                <span>Light Fixture Swaps</span>
+              <button class="service-card" type="button" data-service="Caulking touch-ups">
+                <i class="fa-solid fa-fill-drip"></i>
+                <span>Caulking Touch-Ups</span>
               </button>
-              <button class="service-card" type="button" data-service="Furniture assembly">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <span>Furniture Assembly</span>
+              <button class="service-card" type="button" data-service="Smoke detector replacement">
+                <i class="fa-solid fa-fire-flame-simple"></i>
+                <span>Smoke Detector Replacement</span>
               </button>
-              <button class="service-card" type="button" data-service="Other small repair">
+              <button class="service-card" type="button" data-service="Minor household fixes">
                 <i class="fa-solid fa-ellipsis"></i>
-                <span>...and more</span>
+                <span>Minor Household Fixes</span>
               </button>
             </div>
           </section>
@@ -157,7 +173,7 @@
                 <i class="fa-solid fa-star"></i>
                 <span>5.0 (120+)</span>
               </div>
-              <p>"Ken is reliable, skilled, and gets the job done right."</p>
+              <p>"Reliable, skilled, and gets the job done right."</p>
               <span>Local homeowner</span>
             </article>
             <article id="service-area">
@@ -168,7 +184,7 @@
             <article>
               <i class="fa-regular fa-circle-check"></i>
               <strong>Clear expectations</strong>
-              <span>One visit. Up to 90 minutes. Materials not included.</span>
+              <span>Larger jobs are quoted separately. Materials not included.</span>
             </article>
           </section>
         </div>
@@ -176,7 +192,7 @@
         <aside class="request-card" id="lead-form" aria-labelledby="request-title">
           <div class="request-head">
             <p>Request a Visit</p>
-            <h2 id="request-title">$99 visit &bull; Up to 90 minutes of labor</h2>
+            <h2 id="request-title">$99 Home Fix-It Visit &bull; Flat-rate repairs &bull; Custom quotes</h2>
           </div>
 
           <ol class="step-tabs" aria-label="Request steps">
@@ -187,22 +203,31 @@
 
           <form class="lead-form" name="fix-it-lead" method="post" action="/thank-you.html" data-netlify="true" enctype="multipart/form-data">
             <input type="hidden" name="form-name" value="fix-it-lead">
-            <input type="hidden" name="selected-service" id="selected-service" value="Punch lists">
+            <input type="hidden" name="selected-service" id="selected-service" value="$99 Home Fix-It Visit">
 
             <div class="form-step is-active" data-step="1">
               <label>
                 What can we help you with?
                 <select name="work-type" required>
                   <option value="">Select the main type of work</option>
-                  <option selected>Punch lists</option>
-                  <option>Door adjustments</option>
-                  <option>Faucet leaks and drips</option>
-                  <option>Cabinet fixes</option>
-                  <option>Drywall patches</option>
-                  <option>Shelving and storage</option>
-                  <option>Light fixture swaps</option>
-                  <option>Furniture assembly</option>
-                  <option>Other small repair</option>
+                  <option selected>$99 Home Fix-It Visit</option>
+                  <option>Loose handles</option>
+                  <option>Cabinet hardware</option>
+                  <option>Hinges</option>
+                  <option>Door knobs</option>
+                  <option>Curtain rods</option>
+                  <option>Small shelves</option>
+                  <option>Caulking touch-ups</option>
+                  <option>Smoke detector replacement</option>
+                  <option>Minor household fixes</option>
+                  <option>Home repair walkthrough</option>
+                  <option>Ceiling fan replacement</option>
+                  <option>Light fixture replacement</option>
+                  <option>TV mounting</option>
+                  <option>Faucet replacement</option>
+                  <option>Door adjustment</option>
+                  <option>Minor drywall patch</option>
+                  <option>Custom Project Quote</option>
                 </select>
               </label>
 
@@ -277,7 +302,7 @@
                 <dl>
                   <div>
                     <dt>Work type</dt>
-                    <dd data-review="work-type">Punch lists</dd>
+                    <dd data-review="work-type">$99 Home Fix-It Visit</dd>
                   </div>
                   <div>
                     <dt>Date</dt>
@@ -292,7 +317,7 @@
                     <dd data-review="photos">None selected</dd>
                   </div>
                 </dl>
-                <p>Submitting this form does not confirm an appointment. Ken will contact you first.</p>
+                <p>Submitting this form does not confirm an appointment. We will contact you first.</p>
               </div>
             </div>
 
@@ -317,7 +342,7 @@
               <i class="fa-brands fa-facebook-messenger"></i>
               <span>
                 <strong>Message Us on Messenger</strong>
-                Chat with Ken and get help fast
+                Send a message and get help fast
               </span>
             </a>
 
@@ -329,6 +354,116 @@
         </aside>
       </section>
 
+      <section class="pricing-section section" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Simple service options</p>
+          <h2>Three clear ways to get help.</h2>
+        </div>
+
+        <div class="pricing-grid" aria-label="Service pricing choices">
+          <article class="pricing-card featured">
+            <p class="eyebrow">$99 Home Fix-It Visit</p>
+            <h3>$99 Home Fix-It Visit</h3>
+            <p>Up to 90 minutes for small repairs, adjustments, minor installs, and home repair assessment.</p>
+            <button class="button button-primary" type="button" data-scroll-target="lead-form">
+              Book a $99 Visit
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+          <article class="pricing-card">
+            <p class="eyebrow">Flat-Rate Repair Menu</p>
+            <h3>Flat-Rate Repairs</h3>
+            <p>Starting prices for common jobs like ceiling fans, TV mounting, faucets, light fixtures, door adjustments, and drywall patches.</p>
+            <button class="button button-secondary" type="button" data-scroll-target="flat-rate-menu">
+              View Repair Menu
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+          <article class="pricing-card">
+            <p class="eyebrow">Larger or multiple-item jobs</p>
+            <h3>Custom Project Quote</h3>
+            <p>For larger repairs, multiple items, or jobs that do not fit the $99 Home Fix-It Visit.</p>
+            <button class="button button-secondary" type="button" data-scroll-target="custom-quote">
+              Get a Repair Quote
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+        </div>
+
+        <div class="visit-details">
+          <article>
+            <h3>What the $99 visit is good for</h3>
+            <ul class="check-list">
+              <li>Loose handles</li>
+              <li>Cabinet hardware</li>
+              <li>Hinges</li>
+              <li>Door knobs</li>
+              <li>Curtain rods</li>
+              <li>Small shelves</li>
+              <li>Caulking touch-ups</li>
+              <li>Smoke detector replacement</li>
+              <li>Minor household fixes</li>
+              <li>Home repair walkthrough</li>
+            </ul>
+          </article>
+          <article class="not-included">
+            <h3>Not included in the $99 visit</h3>
+            <ul class="x-list">
+              <li>Ceiling fan installation</li>
+              <li>Light fixture installation</li>
+              <li>Plumbing fixture replacement</li>
+              <li>TV mounting</li>
+              <li>Drywall repair</li>
+              <li>Door repair</li>
+              <li>Electrical work</li>
+              <li>Jobs requiring major parts or specialty tools</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="quote-note">
+          Larger jobs are quoted separately. Send a photo of what you need fixed and we'll recommend the best option.
+        </p>
+      </section>
+
+      <section class="repair-menu-section section" id="flat-rate-menu">
+        <div class="section-heading">
+          <p class="eyebrow">Flat-rate repair menu</p>
+          <h2>Starting prices for common repair jobs.</h2>
+        </div>
+
+        <div class="repair-menu">
+          <article><span>Ceiling fan replacement</span><strong>starting at $150</strong></article>
+          <article><span>Light fixture replacement</span><strong>starting at $125</strong></article>
+          <article><span>TV mounting</span><strong>starting at $150</strong></article>
+          <article><span>Faucet replacement</span><strong>starting at $175</strong></article>
+          <article><span>Door adjustment</span><strong>starting at $125</strong></article>
+          <article><span>Shelf installation</span><strong>starting at $75</strong></article>
+          <article><span>Toilet repair/simple replacement parts</span><strong>starting at $100</strong></article>
+          <article><span>Minor drywall patch</span><strong>starting at $125</strong></article>
+        </div>
+
+        <p class="menu-note">
+          Final pricing depends on job condition, ceiling height, access, parts needed, and whether existing wiring or plumbing is ready.
+        </p>
+      </section>
+
+      <section class="custom-quote-section section" id="custom-quote">
+        <div class="custom-quote-band">
+          <div>
+            <p class="eyebrow">Custom Project Quotes</p>
+            <h2>For larger repairs or multiple-item jobs.</h2>
+            <p>
+              For larger repairs, multiple items, or jobs that do not fit the $99 Home Fix-It Visit, we provide a custom quote after reviewing photos or seeing the job in person.
+            </p>
+          </div>
+          <button class="button button-primary" type="button" data-scroll-target="lead-form">
+            Send photos of the repair and we'll give you the best next step.
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+
       <section class="process-section section" id="process">
         <div class="section-heading">
           <p class="eyebrow">How it works</p>
@@ -338,17 +473,17 @@
           <li>
             <span>1</span>
             <strong>Send the job ticket</strong>
-            <p>Pick the work type, share the address, and add photos if you have them.</p>
+            <p>Pick the work type, share the address, and send photos if you have them.</p>
           </li>
           <li>
             <span>2</span>
-            <strong>Ken confirms the scope</strong>
-            <p>You will know what fits the $99 visit before anything is booked.</p>
+            <strong>We confirm the scope</strong>
+            <p>You will know whether the job fits the $99 visit, flat-rate menu, or a custom quote before anything is booked.</p>
           </li>
           <li>
             <span>3</span>
             <strong>Book the visit</strong>
-            <p>Ken follows up with timing, materials, and any clear limits.</p>
+            <p>We follow up with timing, materials, and the best next step for the repair.</p>
           </li>
         </ol>
       </section>
@@ -360,16 +495,16 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>What's included in the $99 visit?</summary>
-            <p>Up to 90 minutes of handyman labor for small repair tasks.</p>
+            <summary>What's included in the $99 Home Fix-It Visit?</summary>
+            <p>Up to 90 minutes for small repairs, adjustments, minor installs, and home repair assessment.</p>
           </details>
           <details>
             <summary>What if the job takes more than 90 minutes?</summary>
-            <p>Ken will explain the next step and quote additional time before continuing.</p>
+            <p>Larger jobs are quoted separately. Send a photo of what you need fixed and we'll recommend the best option.</p>
           </details>
           <details>
             <summary>Do you provide the materials?</summary>
-            <p>The visit price is labor only. Materials and supplies are paid separately.</p>
+            <p>Materials and larger repairs are quoted separately.</p>
           </details>
           <details>
             <summary>What areas do you serve?</summary>

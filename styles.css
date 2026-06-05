@@ -284,6 +284,17 @@ h1 {
   font-weight: 800;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: -8px 0 30px;
+}
+
+.hero-actions .button {
+  min-width: 190px;
+}
+
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -854,6 +865,165 @@ select:focus {
   line-height: 1.05;
 }
 
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pricing-card,
+.visit-details article,
+.repair-menu article {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.pricing-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 22px;
+}
+
+.pricing-card.featured {
+  border-color: rgba(223, 84, 7, 0.42);
+  box-shadow: var(--soft-shadow);
+}
+
+.pricing-card h3,
+.visit-details h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.pricing-card p:not(.eyebrow),
+.custom-quote-band p,
+.quote-note,
+.menu-note {
+  color: var(--muted);
+}
+
+.pricing-card .button,
+.custom-quote-band .button {
+  width: fit-content;
+}
+
+.visit-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.visit-details article {
+  padding: 22px;
+}
+
+.check-list,
+.x-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li,
+.x-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.check-list li::before,
+.x-list li::before {
+  position: absolute;
+  left: 0;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.check-list li::before {
+  color: var(--orange);
+  content: "\f00c";
+}
+
+.x-list li::before {
+  color: #9a3412;
+  content: "\f00d";
+}
+
+.not-included {
+  background: #fffaf7 !important;
+}
+
+.quote-note,
+.menu-note {
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.repair-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.repair-menu article {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+}
+
+.repair-menu span {
+  font-weight: 800;
+}
+
+.repair-menu strong {
+  flex: 0 0 auto;
+  color: var(--orange-dark);
+  font-size: 0.92rem;
+}
+
+.custom-quote-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  color: #ffffff;
+  background: var(--navy);
+  border-radius: var(--radius);
+  box-shadow: var(--soft-shadow);
+}
+
+.custom-quote-band .eyebrow,
+.custom-quote-band p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.custom-quote-band h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.custom-quote-band p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
 .process-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1033,6 +1203,9 @@ details p {
 
   .trust-grid,
   .proof-row,
+  .pricing-grid,
+  .visit-details,
+  .repair-menu,
   .process-list,
   .faq-list {
     grid-template-columns: 1fr;
@@ -1061,6 +1234,10 @@ details p {
     grid-template-columns: 1fr;
   }
 
+  .custom-quote-band {
+    grid-template-columns: 1fr;
+  }
+
   .step-tabs {
     padding-inline: 18px;
   }
@@ -1082,6 +1259,23 @@ details p {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions,
+  .pricing-card .button,
+  .custom-quote-band .button {
+    width: 100%;
+  }
+
+  .hero-actions .button,
+  .pricing-card .button,
+  .custom-quote-band .button {
+    min-width: 0;
+  }
+
+  .check-list,
+  .x-list {
     grid-template-columns: 1fr;
   }
 
