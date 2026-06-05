@@ -209,7 +209,7 @@ button {
 
 .hero-main {
   display: grid;
-  grid-template-columns: minmax(500px, 1fr) minmax(320px, 0.75fr);
+  grid-template-columns: minmax(420px, 0.82fr) minmax(420px, 1fr);
   gap: 0;
   overflow: hidden;
   background: #ffffff;
@@ -342,25 +342,17 @@ h1 {
 
 .hero-photo {
   position: relative;
-  min-height: 610px;
+  min-height: 660px;
   margin: 0;
   overflow: hidden;
-  background: #e8edf2;
-}
-
-.hero-photo::before {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 34%);
-  content: "";
+  background: #f5f3ef;
 }
 
 .hero-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
   filter: saturate(0.98) contrast(1.03);
 }
 
@@ -1093,26 +1085,7 @@ select:focus {
 }
 
 .proof-layout {
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  gap: 18px;
-  align-items: stretch;
-}
-
-.proof-layout figure {
-  min-height: 320px;
-  margin: 0;
-  overflow: hidden;
-  background: #e8edf2;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-}
-
-.proof-layout img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  display: block;
 }
 
 .proof-layout .proof-row {
@@ -1163,6 +1136,18 @@ select:focus {
 .final-actions .button,
 .final-actions .messenger-cta {
   width: 100%;
+}
+
+.final-actions .button-primary {
+  color: #ffffff;
+  background-color: var(--orange);
+}
+
+.final-actions .button-primary:hover {
+  background-color: var(--orange-dark);
+}
+
+.final-actions .messenger-cta {
   background-color: #ffffff;
 }
 
@@ -1366,6 +1351,23 @@ details p {
     padding: 32px 22px 18px;
   }
 
+  .hero-note {
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+
   h1 {
     font-size: clamp(2.7rem, 13vw, 4rem);
   }
@@ -1391,7 +1393,8 @@ details p {
   }
 
   .hero-photo {
-    min-height: 420px;
+    aspect-ratio: 4 / 5;
+    min-height: auto;
   }
 
   .service-grid {
