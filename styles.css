@@ -148,6 +148,7 @@ button {
   gap: 14px;
 }
 
+.text-link,
 .messenger-link,
 .phone-link {
   display: inline-flex;
@@ -158,6 +159,15 @@ button {
   border-radius: 8px;
   font-size: 0.92rem;
   font-weight: 800;
+}
+
+.text-link {
+  color: var(--navy);
+}
+
+.text-link i {
+  color: var(--orange-dark);
+  font-size: 1.15rem;
 }
 
 .messenger-link {
@@ -802,6 +812,7 @@ select:focus {
   content: "";
 }
 
+.sms-cta,
 .messenger-cta {
   display: flex;
   align-items: center;
@@ -816,10 +827,25 @@ select:focus {
   text-decoration: none;
 }
 
+.sms-cta {
+  color: var(--navy);
+  border-color: var(--line-strong);
+}
+
+.sms-cta i {
+  color: var(--orange-dark);
+}
+
+.sms-cta strong {
+  color: var(--navy);
+}
+
+.sms-cta i,
 .messenger-cta i {
   font-size: 1.7rem;
 }
 
+.sms-cta span,
 .messenger-cta span {
   display: grid;
   color: var(--muted);
@@ -1145,6 +1171,7 @@ select:focus {
 }
 
 .final-actions .button,
+.final-actions .sms-cta,
 .final-actions .messenger-cta {
   width: 100%;
 }
@@ -1158,6 +1185,7 @@ select:focus {
   background-color: var(--orange-dark);
 }
 
+.final-actions .sms-cta,
 .final-actions .messenger-cta {
   background-color: #ffffff;
 }
@@ -1347,6 +1375,7 @@ details p {
     gap: 10px;
   }
 
+  .text-link,
   .messenger-link,
   .phone-link {
     justify-content: flex-start;
