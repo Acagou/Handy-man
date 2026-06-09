@@ -619,6 +619,11 @@ label span {
   font-weight: 600;
 }
 
+[data-description-label] {
+  color: var(--ink);
+  font-weight: 800;
+}
+
 input,
 textarea,
 select {
@@ -656,6 +661,188 @@ select:focus {
   display: grid;
   grid-template-columns: 1fr 0.72fr;
   gap: 12px;
+}
+
+.request-path-field {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.request-path-field legend {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.request-path-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.request-path-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 12px;
+  min-height: 96px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.request-path-option input {
+  width: 18px;
+  min-height: 18px;
+  margin-top: 2px;
+  accent-color: var(--orange);
+}
+
+.request-path-option span {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.request-path-option strong {
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.request-path-option.is-selected {
+  background: #fffaf7;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(223, 84, 7, 0.12);
+}
+
+.path-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.path-panel[hidden] {
+  display: none;
+}
+
+.schedule-notice {
+  padding: 14px 16px;
+  color: var(--ink);
+  background: #f8f9fb;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.schedule-notice strong {
+  font-weight: 900;
+}
+
+.schedule-field {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.schedule-field legend {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.schedule-option {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+}
+
+.schedule-option input {
+  width: 18px;
+  min-height: 18px;
+  accent-color: var(--orange);
+}
+
+.schedule-option.is-available {
+  cursor: pointer;
+  border-color: rgba(223, 84, 7, 0.42);
+}
+
+.schedule-option.is-available:has(input:checked) {
+  background: #fffaf7;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(223, 84, 7, 0.12);
+}
+
+.schedule-option.is-booked {
+  color: var(--muted);
+  background: #f1f3f6;
+}
+
+.schedule-option.is-booked input {
+  cursor: not-allowed;
+}
+
+.schedule-option.is-wide {
+  grid-column: 1 / -1;
+}
+
+.schedule-day {
+  color: inherit;
+  font-weight: 900;
+}
+
+.schedule-status {
+  justify-self: end;
+  padding: 4px 8px;
+  color: var(--navy);
+  background: #eef5ff;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.schedule-option.is-available .schedule-status {
+  color: #8f3504;
+  background: #fff0e6;
+}
+
+.schedule-option.is-booked .schedule-status {
+  color: #687386;
+  background: #e3e7ee;
+}
+
+.time-window-field.is-disabled {
+  color: var(--muted);
+}
+
+.time-window-field.is-disabled select {
+  background: #f1f3f6;
 }
 
 .upload-zone {
@@ -1014,6 +1201,10 @@ select:focus {
   gap: 18px;
 }
 
+.path-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .offer-section {
   padding-top: 24px;
 }
@@ -1066,10 +1257,18 @@ select:focus {
 }
 
 .pricing-card p:not(.eyebrow),
+.card-note,
 .custom-quote-band p,
 .quote-note,
 .menu-note {
   color: var(--muted);
+}
+
+.card-note {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 .pricing-card .button,
@@ -1482,6 +1681,14 @@ details p {
   }
 
   .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .request-path-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-grid {
     grid-template-columns: 1fr;
   }
 
